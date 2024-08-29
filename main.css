@@ -1,0 +1,510 @@
+@font-face {
+    font-family: "Proggy";
+    src: url("resources/NotoMonoNerdFont-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Chicago";
+    src: url("resources/ChicagoFLF.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Helvetica-Narrow";
+    src: url("resources/helvn.ttf") format("truetype");
+}
+
+//  tyOS doesn't subscribe to your liberal, pc, angular, rust, carbon, bullshit, responsive ways. Use a computer or get cancer nerd. 
+
+body {
+    font-family: Helvetica;
+    background-color: rgb(246, 246, 246);
+    margin: 0;
+    width: 100%;
+    min-height: 100vh;
+    background-image: url("resources/swoosh.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-y: bottom;
+    cursor: url("resources/cursor.gif") auto;
+    display: flex;
+}
+
+.nav {
+    font-family: Proggy;
+    font-size: 200pt;
+    color: rgb(66, 18, 247);
+    position: relative;
+}
+
+.nav .autocomplete {
+    color: rgba(183, 183, 183, 0.43);
+    position: absolute;
+    left: 350px;
+    z-index: 1;
+}
+
+#prompt-input {
+    position: absolute;
+    left: 350px;
+    z-index: 2;
+}
+
+.bg-corner {
+    background-image: url("resources/bg-corner.png");
+    background-size: cover;
+    width: 500px;
+    height: 500px;
+}
+
+.bottom-left {
+    position: absolute;
+    bottom: 0px;
+}
+
+.bottom-right {
+    position: absolute;
+    bottom: 30px;
+    right: 100px;
+}
+
+.bg-right-corner {
+    background-image: url("resources/exclm-marks.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 600px;
+    height: 400px;
+}
+
+.top-right {
+    position: absolute;
+    right: 100px;
+    top: 200px;
+}
+
+.face {
+    background-image: url("resources/face.png");
+    background-size: 130px, 130px;
+    background-repeat: no-repeat;
+    width: 130px;
+    height: 130px;
+    animation: faces 4s  infinite;
+    margin-bottom: -40px;
+}
+
+.pipe {
+    background-image: url("resources/pipe.png");
+    width: 150px;
+    height: 205px;
+    animation: blinker 1.3s ease-out infinite;
+    position: absolute;
+    left: 356px;
+    top: 45px;
+    z-index: 2;
+
+}
+
+.shine {
+    animation: shine 3s linear infinite;
+}
+
+@keyframes shine {
+    0% {
+        margin-left: -600px;
+    }
+
+    60% {
+        margin-left: 600px;
+    }
+
+    100% {
+        margin-left: 600px;
+    }
+}
+
+@keyframes blinker {
+    40% {
+        opacity: 0;
+    }
+
+    60% {
+        opacity: 0;
+    }
+}
+
+@keyframes faces {
+    0% {
+        background-image: url("resources/face.png");
+    }
+
+    12.5% {
+        background-image: url("resources/face2.png");
+    }
+
+    25% {
+        background-image: url("resources/face3.png");
+    }
+
+    37.5% {
+        background-image: url("resources/face4.png");
+    }
+
+    50% {
+        background-image: url("resources/face5.png");
+    }
+
+    62.5% {
+        background-image: url("resources/face6.png");
+    }
+
+    75% {
+        background-image: url("resources/face7.png");
+    }
+
+    87.5% {
+        background-image: url("resources/face8.png");
+    }
+}
+
+.mission-container {
+    position: absolute;
+    right: 56%;
+    top: 50%;
+}
+
+.mission-small {
+    background-image: url('resources/small-mission.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 150px;
+    height: 150px;
+}
+
+.mission-container:hover {
+    background-color: rgb(231, 230, 81);
+    transform: rotate(-15deg);
+}
+
+.mission-container:active {
+    background-color: rgb(231, 230, 81);
+    transform: rotate(-15deg) translate(20px, 20px);
+}
+
+.tr {
+    color: #999;
+    font-size: 10px;
+}
+
+/*#modal {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 999;
+}*/
+
+.modal-hidden {
+    display: none;
+}
+
+.modal-visible {
+    display: flex;
+}
+
+.modal-container {
+    width: 400px;
+    height: 400px;
+    z-index: 999;
+    background-image: url("resources/win-bg.png");
+    background-size: 400px 400px;
+    background-color: rgba(0, 0, 0, 0);
+    position: absolute;
+}
+
+#modal-settings {
+    right: 140px;
+    bottom: 134px;
+}
+
+#modal-audio {
+    right: 140px;
+    bottom: 37px;
+}
+
+/*
+.win-title-bar {
+    background-image: url('.resources/win-title-bar-bg.png');
+}
+*/
+.close {
+    float: right;
+    background-image: url("resources/btn-close.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100px;
+    height: 100px;
+}
+
+.close:hover {
+    background-image: url("resources/btn-close-hovered.png");
+}
+
+.close:active {
+    background-image: url("resources/btn-close-pressed.png");
+}
+
+.button-play {
+    background-image: url("resources/btn-play.png");
+    background-size: contain;
+}
+
+.button-play:hover {
+    background-image: url("resources/btn-play-hovered.png");
+}
+
+.button-play:active {
+    background-image: url("resources/btn-play-pressed.png");
+}
+
+.mission {
+    background-image: url("resources/mission.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 500px;
+    height: 700px;
+    float: left;
+}
+
+.img {
+    background-image: url("resources/elcap.jpg");
+    background-size: 500px 600px;
+    width: 500px;
+    height: 600px;
+    float: right;
+    position: relative;
+    margin-right: 20px;
+    margin-top: 120px;
+}
+
+.face-container {
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+}
+
+.audio-button {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-image: url("resources/btn-audio.png");
+    background-size: 100px 100px;
+    width: 100px;
+    height: 100px;
+
+}
+
+.audio-button:hover {
+    background-image: url("resources/btn-audio-hovered.png");
+}
+
+.audio-button:active {
+    background-image: url("resources/btn-audio-pressed.png");
+}
+
+.settings-button {
+    position: fixed;
+    bottom: 130px;
+    right: 30px;
+    background-image: url("resources/btn-gear.png");
+    background-size: 100px 100px;
+    width: 100px;
+    height: 100px;
+
+}
+
+.settings-button:hover {
+    background-image: url("resources/btn-gear-hovered.png");
+}
+
+.settings-button:active {
+    background-image: url("resources/btn-gear-pressed.png");
+}
+
+
+.back-button {
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+    background-image: url("resources/back.png");
+    background-size: 100px 100px;
+    width: 100px;
+    height: 100px;
+
+}
+
+.back-button:hover {
+    background-image: url("resources/back-hover.png");
+}
+
+.back-button:active {
+    background-image: url("resources/back-active.png");
+}
+
+.arrow {
+    background-image: url("resources/arrow.png");
+    background-size: 200px 200px;
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    right: 45%;
+    top: 40%;
+}
+
+.ty {
+    background-image: url("resources/ty.png");
+    background-size: 500px 200px;
+    width: 500px;
+    height: 200px;
+    position: absolute;
+    right: 80px;
+    top: 20px;
+}
+
+.home {
+    background-image: url("resources/large-logo.png");
+    background-size: 500px auto;
+    background-position-x: 50%;
+    background-repeat: no-repeat;
+    margin-top: 75px;
+}
+
+.text {
+    font-family: "Times New Roman";
+    position: relative;
+    /*  bottom: 170px;*/
+    left: auto;
+    width: 100%;
+    text-align: center;
+    font-size: 12pt;
+
+
+}
+
+.nav-bar {
+    
+    /*border: 2px solid rgb(143, 143, 137);*/
+    width: 50%;
+    margin: auto;
+    padding: 2px;
+    min-width: 600px;
+    font-family: Helvetica-Narrow;
+    display: inline;
+}
+
+.nav-img {
+    height: 15px;
+}
+
+.nav-item {
+    background-color: rgb(217, 217, 217);
+    border-width: 2px;
+    border-style: solid;
+    margin: 0;
+    display: inline;
+    border-right-color: rgb(53, 53, 53);
+    border-left-color: rgb(153, 153, 153);
+    border-top-color: rgb(135, 135, 135);
+    border-bottom-color: rgb(51, 51, 51);
+    cursor: pointer;
+    padding: 2px 10px;
+}
+
+.nav-item:hover {
+    background-color: rgb(180, 180, 180);
+}
+
+.nav-item:active {
+    background-color: rgba(50, 50, 50, 0.7);
+}
+
+.nav-item-selected,
+.nav-item-selected:hover {
+    border-left-color: rgb(20, 20, 0);
+    border-bottom-color: rgb(96, 96, 96);
+    border-right-color: rgb(85, 85, 85);
+    border-top-color: rgb(20, 20, 0);
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 222, 36);
+}
+
+.nav-item-selected a {
+    color: rgb(255, 222, 36);
+}
+
+.content {
+    width: 50%;
+    margin: auto;
+    min-width: 600px;
+    margin-bottom: 100px;
+}
+
+a {
+    color: black;
+}
+
+.start {
+    font-family: Times;
+}
+
+.win-close {
+    background-image: url("resources/btn-x.png");
+    background-size: contain;
+}
+
+.win-close:hover {
+    background-image: url("resources/btn-x-hovered.png");
+}
+
+.win-close:active {
+    background-image: url("resources/btn-x-pressed.png");
+}
+
+
+.play-button {
+    position: absolute;
+    background-image: url("resources/play.png");
+    background-size: 100px 100px;
+    width: 100px;
+    height: 100px;
+    float: right;
+    right: 30%;
+}
+
+.play-button:hover {
+    background-image: url("resources/play-hover.png");
+}
+
+.play-button:active {
+    background-image: url("resources/play-active.png");
+}
+
+.audio-playing {
+    color: rgb(48, 30, 204);
+}
+
+.modal-container {
+    font-family: Chicago;
+    color: black;
+}
+
+.win-title {
+    font-family: Chicago;
+    color: white;
+    margin: 0;
+}
+
+.text a {
+    text-decoration: none;
+    /*    font-weight: bold;*/
+}

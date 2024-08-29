@@ -1,0 +1,75 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="main.css" />
+		<title>tyOS</title>
+		<script type="text/javascript" src="main.js"></script>
+	</head>
+	<body class="start">
+		<div class="text">
+			<div class="home">
+				<img class="shine" src="resources/gleem.png" width="200" style="z-index: 999;"/>
+			</div>
+			<div style="background-color: rgb(217, 217, 217); border: 2px solid rgb(143, 143, 137); width: 50%; margin: auto; padding: 2px;">
+				<a href="index.html?origin=story.html">Mission</a>&nbsp;&nbsp;&nbsp;
+				<a href="contact.html">Technology</a>&nbsp;&nbsp;&nbsp;
+				<a href="contact.html">Music</a>&nbsp;&nbsp;&nbsp;
+				<a href="contact.html">Story</a>&nbsp;&nbsp;&nbsp;
+				<a href="jobs.html?origin=start.html">Jobs</a>&nbsp;&nbsp;&nbsp;
+	
+			</div>
+			<br>
+			<br>
+			tyOS is primarily a music & technology company, although we also take design comissions (no refunds).<br>
+			<br>
+			Started by Tyson Malone, an international man of mystery, tyOS quickly became the industry standard for music<br>
+			technologies for the better part of the 1980s. No one is sure how tyOS gained so much success so rapidly. Some <br>
+			say it was Malone's close ties with Steve Jobbs (founder of Apple). Others claim it was his unmatched charisma and creative eye. <br>
+			<br>All the success got to Malone, and after picking up a nasty coke habit, he ran his Countach off the Brooklyn Bridge.<br>
+			Fortunately, he was able to leave a legacy strong enough for Bjarne Stroustrup to list Malone as one of his primary inspirations<br>
+			for writing C++. Malone and his vision are survived through his disciple James Pickering, who is the current CEO of tyOS.
+		</div>
+
+		<div id="modal-audio" class="modal-container modal-hidden">
+			<div style="margin: 17px auto; width: 367px; height: 30px; padding-left: -5px; background-image: url('resources/win-title-bar-bg.png'); background-size: 367px 30px;">
+				<p class="win-title">
+					<img src="resources/win-title-bar-icon.png" style="margin-top: 5px; margin-left: 9px;" width="20" height="17" />
+					Audio
+					<img onclick="closeModal()" class="win-close" style="position: relative; float: right; margin-top: 3px; margin-right: 3px;" width="24" height="24" />
+				</p>
+				<br>
+				<fieldset>
+					<legend>Tracks</legend>
+					<img onclick="playAudio(1)" class="button-play" width="25" height="25"/>&emsp;<span id="label-audio-1">1. hazex_132bpm.mp3</span><br>
+					<img onclick="playAudio(2)" class="button-play" width="25" height="25"/>&emsp;<span id="label-audio-2">2. birds_trippie_129bpm.mp3</span><br>
+					<img onclick="playAudio(3)" class="button-play" width="25" height="25"/>&emsp;<span id="label-audio-3">3. more_chaos_140bpm.mp3</span><br>
+					<img onclick="playAudio(4)" class="button-play" width="25" height="25"/>&emsp;<span id="label-audio-4">4. aphex_jerk_186bpm.mp3</span><br>
+				</fieldset> 
+			</div>
+		</div>
+
+		<!-- Modal/Settings -->
+		<div id="modal-settings" class="modal-container modal-hidden">
+			<div style="margin: 17px auto; width: 367px; height: 30px; padding-left: -5px; background-image: url('resources/win-title-bar-bg.png'); background-size: 367px 30px;">
+				<p class="win-title">
+					<img src="resources/win-title-bar-icon.png" style="margin-top: 5px; margin-left: 9px;" width="20" height="17" />
+					Settings
+					<img onclick="closeModal()" class="win-close" style="position: relative; float: right; margin-top: 3px; margin-right: 3px;" width="24" height="24" />
+				</p>
+				<br>
+				<fieldset>
+					<legend>Theme</legend>
+					<input type="radio" />Light<br>
+					<input type="radio" />Dark<br>
+				</fieldset>
+			</div>
+		</div>
+
+		<!-- Footer -->
+		<div class="audio-button" onclick="showAudioModal()">
+		</div>
+		<div class="settings-button" onclick="showSettingsModal()">
+		</div>
+<!-- 		<div class="back-button" onclick="goBack()">
+		</div> -->
+	</body>
+</html>

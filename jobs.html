@@ -1,0 +1,113 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="main.css" />
+    <title>tyOS</title>
+    <script type="text/javascript" src="main.js"></script>
+    <meta charset=utf-8>
+</head>
+
+<body class="start">
+    <div class="text">
+        <div class="home">
+            <img class="shine" src="resources/gleem.png" width="200" style="z-index: 999;" />
+        </div>
+        <div class="nav-bar">
+            <div onclick="window.location='mission.html'" class="nav-item">
+                <img src="resources/nav-play.png" class="nav-img" />
+                Mission
+                <span class="tr">цель</span>
+            </div>
+            <div onclick="window.location='tech.html'" class="nav-item">
+                <img src="resources/nav-play.png" class="nav-img" />
+                Technology
+                <span class="tr">технология</span>
+            </div>
+            <div onclick="window.location='music.html'" class="nav-item">
+                <img src="resources/nav-play.png" class="nav-img" />
+                Music
+                <span class="tr">музыка</span>
+            </div>
+            <div onclick="window.location='story.html'" class="nav-item">
+                <img src="resources/nav-play.png" class="nav-img" />
+                Story
+                <span class="tr">рассказ</span>
+            </div>
+            <div onclick="window.location='jobs.html'" class="nav-item nav-item-selected">
+                <img src="resources/nav-play-inverse.png" class="nav-img" />
+                Jobs 
+                <span class="tr">занятие</span>
+            </div>
+        </div>
+        <div class="content" style="text-align:left">
+            <br>
+            <br>
+            If you know of any (except for web dev), please let me know. Thanks!<br>
+            <br>
+            My skills include (but are not limited to):
+            <ul>
+            	<li>C++</li>
+            	<ul>
+            		<li>Added features and became the de-facto UI czar of a Qt  traffic modeling application</li>
+            		<li>Wrote a simple 2D renderer using OpenGL and GLFW</li>
+            		<li>Wrote a cross platform UI library using entt and OpenGL</li>
+            		<li>Wrote a library to provide support for Font Awesome 5 in Qt</li>
+            		<li>Writing an open source granular synth for Arduino</li>
+            		<li>Added features to and maintained a cross platform native mobile app for infrastructure maintanence</li>
+            	</ul>
+            	<li>Javascript/Typescript</li>
+            	<ul>
+            		<li>Rewrote the aforementioned cross-platform app using React Native</li>
+            		<li>Wrote this website without any stupid frameworks because I'm not a liberal bootcamp millenial fuck</li>
+            		<li>Don't hire me to use this bs language I won't accept</li>
+            	</ul>
+            </ul>
+        </div>
+    </div>
+    <div id="modal-audio" class="modal-container modal-hidden">
+        <div style="margin: 17px auto; width: 367px; height: 30px; padding-left: -5px; background-image: url('resources/win-title-bar-bg.png'); background-size: 367px 30px;">
+            <p class="win-title">
+                <img src="resources/win-title-bar-icon.png" style="margin-top: 5px; margin-left: 9px;" width="20" height="17" />
+                Audio
+                <img onclick="closeModal()" class="win-close" style="position: relative; float: right; margin-top: 3px; margin-right: 3px;" width="24" height="24" />
+            </p>
+            <br>
+            <fieldset>
+                <legend>Tracks</legend>
+                <img onclick="playAudio(1)" class="button-play" width="25" height="25" />&emsp;<span id="label-audio-1">1. hazex_132bpm.mp3</span><br>
+                <img onclick="playAudio(2)" class="button-play" width="25" height="25" />&emsp;<span id="label-audio-2">2. birds_trippie_129bpm.mp3</span><br>
+                <img onclick="playAudio(3)" class="button-play" width="25" height="25" />&emsp;<span id="label-audio-3">3. more_chaos_140bpm.mp3</span><br>
+                <img onclick="playAudio(4)" class="button-play" width="25" height="25" />&emsp;<span id="label-audio-4">4. aphex_jerk_186bpm.mp3</span><br>
+            </fieldset>
+        </div>
+    </div>
+    <!-- Modal/Settings -->
+    <div id="modal-settings" class="modal-container modal-hidden">
+        <div style="margin: 17px auto; width: 367px; height: 30px; padding-left: -5px; background-image: url('resources/win-title-bar-bg.png'); background-size: 367px 30px;">
+            <p class="win-title">
+                <img src="resources/win-title-bar-icon.png" style="margin-top: 5px; margin-left: 9px;" width="20" height="17" />
+                Settings
+                <img onclick="closeModal()" class="win-close" style="position: relative; float: right; margin-top: 3px; margin-right: 3px;" width="24" height="24" />
+            </p>
+            <br>
+            <fieldset>
+                <legend>Theme</legend>
+                <input type="radio" />Light<br>
+                <input type="radio" />Dark<br>
+            </fieldset>
+        </div>
+    </div>
+    <!-- Footer -->
+    <div class="face-container">
+        <div class="face">
+        </div>
+    </div>
+    <div class="audio-button" onclick="showAudioModal()">
+    </div>
+    <div class="settings-button" onclick="showSettingsModal()">
+    </div>
+    <!--        <div class="back-button" onclick="goBack()">
+        </div> -->
+</body>
+
+</html>
