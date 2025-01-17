@@ -70,3 +70,20 @@ function playAudio(id) {
 
 	audio.play();
 }
+
+function showImage(src) {
+	document.getElementsByClassName("large-img")[0].classList.remove("hidden");
+		document.getElementById("large-img-tag").setAttribute("style", "background-image:url('resources/" + src + "')");
+		document.body.classList.add("no-scroll");
+
+}
+
+function hideImage() {
+	document.getElementsByClassName("large-img")[0].classList.add("hidden");
+		document.body.classList.remove("no-scroll");
+
+}
+
+function nullopt() {
+
+}

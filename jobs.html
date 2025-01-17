@@ -7,87 +7,97 @@
     <meta charset=utf-8>
 </head>
 
-<body class="start">
-    <div class="text">
-        <div class="home">
-            <img class="shine" src="resources/gleem.png" width="200" style="z-index: 999;" />
-        </div>
-        <div class="nav-bar">
-            <div onclick="window.location='mission.html'" class="nav-item">
-                <img src="resources/nav-play.png" class="nav-img" />
-                Mission
-                <span class="tr">цель</span>
+<body>
+    <div class="start">
+        <div class="text">
+            <div style="height: 60px"></div>
+            <div class="nav-bar">
+                <div onclick="window.location='index.html'" class="nav-item">
+                    <img src="resources/nav-play.png" class="nav-img" />
+                    Mission
+                    <span class="tr">цель</span>
+                </div>
+                <div onclick="window.location='tech.html'" class="nav-item">
+                    <img src="resources/nav-play.png" class="nav-img" />
+                    Technology
+                    <span class="tr">технология</span>
+                </div>
+                <div onclick="window.location='music.html'" class="nav-item">
+                    <img src="resources/nav-play.png" class="nav-img" />
+                    Music
+                    <span class="tr">музыка</span>
+                </div>
+                <br class="nav-break">
+                <div onclick="window.location='story.html'" class="nav-item">
+                    <img src="resources/nav-play.png" class="nav-img" />
+                    Story
+                    <span class="tr">рассказ</span>
+                </div>
+                <div onclick="window.location='jobs.html'" class="nav-item nav-item-selected">
+                    <img src="resources/nav-play-inverse.png" class="nav-img" />
+                    Jobs
+                    <span class="tr">занятие</span>
+                </div>
             </div>
-            <div onclick="window.location='tech.html'" class="nav-item">
-                <img src="resources/nav-play.png" class="nav-img" />
-                Technology
-                <span class="tr">технология</span>
+            <div class="content" style="text-align:left">
+                <br>
+                <br>
+                While we are not in the hiring business, we do "rent out" our perfectly legal employee on a per project basis.
+                <br>
+                <br>
+                James Pickering, our coder for hire, is a hard dedicated worker who will be sure to satisfy you. He may tell you he won't do web dev, but if the price is right he'll degrade himself for you.<br>
+                <br>
+                His skills include (but are not limited to):
+                <ul>
+                    <li>Building cross platform enterprise applications</li>
+                    <li>OpenGL graphics</li>
+                    <li>Designing UIs</li>
+                    <li>Creative problem solving</li>
+                    <li>Algorithms</li>
+                    <li>API design</li>
+                    <li>Adobe Suite (e.g. Photoshop, Illustrator, After Effects)</li>
+                    <li>...Web development</li>
+                </ul>
+                <br>
+                His language knowledge includes:
+                <ul>
+                    <li>C++</li>
+                    <li>C</li>
+                    <li>Swift</li>
+                    <li>Objective-C</li>
+                    <li>C#</li>
+                    <li>Java</li>
+                    <li>Python</li>
+                    <li>...HTML/CSS/Javascript/Typescript</li>
+                </ul>
             </div>
-            <div onclick="window.location='music.html'" class="nav-item">
-                <img src="resources/nav-play.png" class="nav-img" />
-                Music
-                <span class="tr">музыка</span>
-            </div>
-            <div onclick="window.location='story.html'" class="nav-item">
-                <img src="resources/nav-play.png" class="nav-img" />
-                Story
-                <span class="tr">рассказ</span>
-            </div>
-            <div onclick="window.location='jobs.html'" class="nav-item nav-item-selected">
-                <img src="resources/nav-play-inverse.png" class="nav-img" />
-                Jobs 
-                <span class="tr">занятие</span>
-            </div>
-        </div>
-        <div class="content" style="text-align:left">
-            <br>
-            <br>
-            If you know of any (except for web dev), please let me know. Thanks!<br>
-            <br>
-            My skills include (but are not limited to):
-            <ul>
-            	<li>C++</li>
-            	<ul>
-            		<li>Added features and became the de-facto UI czar of a Qt  traffic modeling application</li>
-            		<li>Wrote a simple 2D renderer using OpenGL and GLFW</li>
-            		<li>Wrote a cross platform UI library using entt and OpenGL</li>
-            		<li>Wrote a library to provide support for Font Awesome 5 in Qt</li>
-            		<li>Writing an open source granular synth for Arduino</li>
-            		<li>Added features to and maintained a cross platform native mobile app for infrastructure maintanence</li>
-            	</ul>
-            	<li>Javascript/Typescript</li>
-            	<ul>
-            		<li>Rewrote the aforementioned cross-platform app using React Native</li>
-            		<li>Wrote this website without any stupid frameworks because I'm not a liberal bootcamp millenial fuck</li>
-            		<li>Don't hire me to use this bs language I won't accept</li>
-            	</ul>
-            </ul>
         </div>
     </div>
+    <!-- Modals -->
+    <!--        -->
     <div id="modal-audio" class="modal-container modal-hidden">
         <div style="margin: 17px auto; width: 367px; height: 30px; padding-left: -5px; background-image: url('resources/win-title-bar-bg.png'); background-size: 367px 30px;">
             <p class="win-title">
                 <img src="resources/win-title-bar-icon.png" style="margin-top: 5px; margin-left: 9px;" width="20" height="17" />
                 Audio
-                <img onclick="closeModal()" class="win-close" style="position: relative; float: right; margin-top: 3px; margin-right: 3px;" width="24" height="24" />
+                <img onClick="closeModal()" class="win-close" style="position: relative; float: right; margin-top: 3px; margin-right: 3px;" width="24" height="24" />
             </p>
             <br>
             <fieldset>
                 <legend>Tracks</legend>
-                <img onclick="playAudio(1)" class="button-play" width="25" height="25" />&emsp;<span id="label-audio-1">1. hazex_132bpm.mp3</span><br>
-                <img onclick="playAudio(2)" class="button-play" width="25" height="25" />&emsp;<span id="label-audio-2">2. birds_trippie_129bpm.mp3</span><br>
-                <img onclick="playAudio(3)" class="button-play" width="25" height="25" />&emsp;<span id="label-audio-3">3. more_chaos_140bpm.mp3</span><br>
-                <img onclick="playAudio(4)" class="button-play" width="25" height="25" />&emsp;<span id="label-audio-4">4. aphex_jerk_186bpm.mp3</span><br>
+                <img onClick="playAudio(1)" class="button-play" width="25" height="25" />&emsp;<span id="label-audio-1">1. hazex_132bpm.mp3</span><br>
+                <img onClick="playAudio(2)" class="button-play" width="25" height="25" />&emsp;<span id="label-audio-2">2. birds_trippie_129bpm.mp3</span><br>
+                <img onClick="playAudio(3)" class="button-play" width="25" height="25" />&emsp;<span id="label-audio-3">3. more_chaos_140bpm.mp3</span><br>
+                <img onClick="playAudio(4)" class="button-play" width="25" height="25" />&emsp;<span id="label-audio-4">4. aphex_jerk_186bpm.mp3</span><br>
             </fieldset>
         </div>
     </div>
-    <!-- Modal/Settings -->
     <div id="modal-settings" class="modal-container modal-hidden">
         <div style="margin: 17px auto; width: 367px; height: 30px; padding-left: -5px; background-image: url('resources/win-title-bar-bg.png'); background-size: 367px 30px;">
             <p class="win-title">
                 <img src="resources/win-title-bar-icon.png" style="margin-top: 5px; margin-left: 9px;" width="20" height="17" />
                 Settings
-                <img onclick="closeModal()" class="win-close" style="position: relative; float: right; margin-top: 3px; margin-right: 3px;" width="24" height="24" />
+                <img onClick="closeModal()" class="win-close" style="position: relative; float: right; margin-top: 3px; margin-right: 3px;" width="24" height="24" />
             </p>
             <br>
             <fieldset>
@@ -97,17 +107,16 @@
             </fieldset>
         </div>
     </div>
-    <!-- Footer -->
-    <div class="face-container">
-        <div class="face">
-        </div>
-    </div>
+    <!-- Buttoms -->
+    <!--         -->
     <div class="audio-button" onclick="showAudioModal()">
     </div>
     <div class="settings-button" onclick="showSettingsModal()">
     </div>
-    <!--        <div class="back-button" onclick="goBack()">
-        </div> -->
+    <div class="face-container">
+        <div class="face">
+        </div>
+    </div>
 </body>
 
 </html>

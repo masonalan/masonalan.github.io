@@ -7,147 +7,164 @@
     <meta charset=utf-8>
 </head>
 
-<body class="start">
-    <div class="text">
-        <div style="height: 60px"></div>
-        <div class="nav-bar" style="position:sticky;top:30">
-            <div onclick="window.location='index.html'" class="nav-item">
-                <img src="resources/nav-play.png" class="nav-img" />
-                Mission
-                <span class="tr">цель</span>
+<body>
+    <div class="start">
+        <div class="text">
+            <div style="height: 60px"></div>
+            <div class="nav-bar">
+                <div onclick="window.location='index.html'" class="nav-item">
+                    <img src="resources/nav-play.png" class="nav-img" />
+                    Mission
+                    <span class="tr">цель</span>
+                </div>
+                <div onclick="window.location='tech.html'" class="nav-item nav-item-selected">
+                    <img src="resources/nav-play-inverse.png" class="nav-img" />
+                    Technology
+                    <span class="tr">технология</span>
+                </div>
+                <div onclick="window.location='music.html'" class="nav-item">
+                    <img src="resources/nav-play.png" class="nav-img" />
+                    Music
+                    <span class="tr">музыка</span>
+                </div>
+                <br class="nav-break">
+                <div onclick="window.location='story.html'" class="nav-item">
+                    <img src="resources/nav-play.png" class="nav-img" />
+                    Story
+                    <span class="tr">рассказ</span>
+                </div>
+                <div onclick="window.location='jobs.html'" class="nav-item">
+                    <img src="resources/nav-play.png" class="nav-img" />
+                    Jobs
+                    <span class="tr">занятие</span>
+                </div>
             </div>
-            <div onclick="window.location='tech.html'" class="nav-item nav-item-selected">
-                <img src="resources/nav-play-inverse.png" class="nav-img" />
-                Technology
-                <span class="tr">технология</span>
+            <div class="content">
+                <br>
+                <br>
+                <img src="resources/circle-logo.png" class="front-logo" width="400" />
+                <br>
+                <br>
+                <br>
+                <br>
+                At tyOS, we pride ourselves on making beautiful, easy to use technologies for whatever you may need. Please, have a look at a list of our projects below. We would love to hear your feedback!
+                <br>
+                <br>
+                <b>Table of Contents:</b>
+                <div style="text-align: left;font-size: 10pt;">
+                    <ol>
+                        <li><a href="#granular">Granular Synth (w/ Ritual Object)</a><br></li>
+                        <li><a href="#trundle"> Trundle: A Terminal UI Library</a><br></li>
+                        <li><a href="#world">tyWorld</a><br></li>
+                        <li><a href="#assets">tyOS Assets</a>
+                        <li><a href="#drum">A Drum Machine in Terminal</a><br></li>
+                    </ol>
+                </div>
+                <br>
+                <i style="font-size: 9pt;">Everything © Copyright 2025 tyOS</i>
+                <br>
+                <br>
+                <div id="granular" style="padding-top:20px"></div>
+                <hr>
+                <h2>Granular Synth</h2>
+                <i>a collaboration with <a href="https://ritual-object.com" target="_blank">Ritual Object</a></i>
+                <br>
+                <br>
+                We are building a granular synth with an Arduino and designing a case for it. Granular synthesis is the process of taking a small sample, or "grain", of some audio (e.g. 0.1s), looping it quickly to create a new sound.
+                <br>
+                <br>
+                <span style="position: relative; left: -50px; top:-180px;font-size:8pt"><i>fig a. 3D mockups of the case</i></span> <img class="clickable-img" onClick="showImage('synth1.jpg')" src="resources/synth1.jpg" width="470px" />
+                <br>
+                <br>
+                <span style="position: relative; left: -50px; top:-180px;font-size:8pt"><i>fig b. synth circuit</i></span> <img class="clickable-img" onClick="showImage('synth2.png')" src="resources/synth2.png" width="270px" />
+                <br>
+                <br>
+                You can check out the source code <a href="https://github.com/masonalan/lo-grain">here.</a>
+                <br>
+                <br>
+                <div id="trundle" style="padding-top:20px"></div>
+                <hr>
+                <h2>Trundle: A Terminal UI Library</h2>
+                Trundle is a C++ TUI library (will have Python bindings soon hopefully). The library provides a robust set of widgets for users to flexibly build entirely text based UIs.
+                <br>
+                <br>
+                <span style="position: relative; left: -50px; top:-180px;font-size:8pt"><i>fig a. a file browser tree view</i></span> <img class="clickable-img" onClick="showImage('tree.png')" src="resources/tree.png" width="320px" />
+                <br>
+                <br>
+                <img class="clickable-img" onClick="showImage('tree search.png')" src="resources/tree search.png" width="320px" /><span style="position: relative; left: 50px; top:-180px;font-size:8pt"><i>fig b. searching a tree view</i></span>
+                <br>
+                <br><br><span style="position: relative; left: 100px; top:0px;font-size:8pt"><i>fig c. a simple text editor</i></span> <br><br><br><img class="clickable-img" onClick="showImage('list.png')" src="resources/list.png" width="590px" />
+                <br>
+                <br>
+                <br>
+                <span style="position: relative; left: -50px; top:-180px;font-size:8pt"><i>fig d. a prompt with a text field</i></span> <img class="clickable-img" onClick="showImage('prompt.png')" src="resources/prompt.png" width="380px" />
+                <br>
+                <br>
+                You can check out the source code <a href="https://github.com/masonalan/nprayers">here.</a>
+                <br>
+                <br>
+                <div id="world" style="padding-top:20px"></div>
+                <hr>
+                <h2>tyWorld</h2>
+                tyWorld is a simple OpenGL planet simulator written in C++. The planets are cubes and the asteroid belts are rendered using instanced rendering. The focus of this project was to learn about different types of lighting.
+                <br>
+                <br>
+                <span style="position: relative; left: -50px; top:-180px;font-size:8pt"><i>fig a. demo of tyWorld</i></span> <video width="600" controls autoplay>
+                    <source src="resources/tyworld.mov" type="video/mp4">
+                </video>
+                <br>
+                <br>
+                You can check out the source code <a href="https://github.com/masonalan/ty-world">here.</a>
+                <br>
+                <br>
+                <div id="world" style="padding-top:20px"></div>
+                <hr>
+                <h2>tyOS Assets</h2>
+                We designed our brand ourselves. Here are the assets used to make this website. We do this because we don't believe in web frameworks or web development at all.
+                <br>
+                <br>
+                <span style="position: relative; left: -50px; top:-180px;font-size:8pt"><i>fig a. assets</i></span> <img class="clickable-img" onClick="showImage('resource.png')" src="resources/resource.png" width="480px" />
+                <br>
+                <br>
+                <span style="position: relative; left: -50px; top:-180px;font-size:8pt"><i>fig b. alt logo 1</i></span> <img class="clickable-img" onClick="showImage('logo1.png')" src="resources/logo1.png" width="420px" />
+                <br>
+                <br>
+                <img class="clickable-img" onClick="showImage('logo2.png')" src="resources/logo2.png" width="380px" /><span style="position: relative; left: 50px; top:-180px;font-size:8pt"><i>fig c. alt logo 2</i></span>
+                <br>
+                <br>
             </div>
-            <div onclick="window.location='music.html'" class="nav-item">
-                <img src="resources/nav-play.png" class="nav-img" />
-                Music
-                <span class="tr">музыка</span>
-            </div>
-            <div onclick="window.location='story.html'" class="nav-item">
-                <img src="resources/nav-play.png" class="nav-img" />
-                Story
-                <span class="tr">рассказ</span>
-            </div>
-            <div onclick="window.location='jobs.html'" class="nav-item">
-                <img src="resources/nav-play.png" class="nav-img" />
-                Jobs
-                <span class="tr">занятие</span>
-            </div>
-        </div>
-        <div class="content">
-            <br>
-            <br>
-            At tyOS, we pride ourselves on making beautiful, easy to use technologies for whatever you may need. Please, have a look at a list of our projects below. We would love to hear your feedback!
-            <br>
-            <br>
-            <b>Table of Contents:</b>
-            <div style="text-align: left;font-size: 10pt;">
-                <ol>
-                    <li><a href="#granular">Granular Synth (w/ Ritual Object)</a><br></li>
-                    <li><a href="#trundle"> Trundle: A Terminal UI Library</a><br></li>
-                    <li><a href="#world">tyWorld</a><br></li>
-                    <li><a href="#assets">tyOS Assets</a>
-                    <li><a href="#drum">A Drum Machine in Terminal</a><br></li>
-                </ol>
-            </div>
-            <i style="font-size: 9pt;">Everything © Copyright 2025 tyOS</i>
-            <div id="granular" style="padding-top:20px"></div>
-            <hr>
-            <h2>Granular Synth</h2>
-            <i>a collaboration with <a href="https://ritual-object.com" target="_blank">Ritual Object</a></i>
-            <br>
-            <br>
-            We are building a granular synth with an Arduino and designing a case for it. Granular synthesis is the process of taking a small sample, or "grain", of some audio (e.g. 0.1s), looping it quickly to create a new sound.
-            <br>
-            <br>
-            <span style="position: relative; left: -50px; top:-180px;font-size:8pt"><i>fig a. 3D mockups of the case</i></span> <img src="resources/synth1.jpg" width="470px" />
-            <br>
-            <br>
-            <span style="position: relative; left: -50px; top:-180px;font-size:8pt"><i>fig b. synth circuit</i></span> <img src="resources/synth2.png" width="270px" />
-            <br>
-            <br>
-            You can check out the source code <a href="https://github.com/masonalan/lo-grain">here.</a>
-            <br>
-            <br>
-            <div id="trundle" style="padding-top:20px"></div>
-            <hr>
-            <h2>Trundle: A Terminal UI Library</h2>
-            Trundle is a C++ TUI library (will have Python bindings soon hopefully). The library provides a robust set of widgets for users to flexibly build entirely text based UIs.
-            <br>
-            <br>
-            <span style="position: relative; left: -50px; top:-180px;font-size:8pt"><i>fig a. a file browser tree view</i></span> <img src="resources/tree.png" width="320px" />
-            <br>
-            <br>
-            <img src="resources/tree search.png" width="320px" /><span style="position: relative; left: 50px; top:-180px;font-size:8pt"><i>fig b. searching a tree view</i></span>
-            <br>
-            <br><br><span style="position: relative; left: 100px; top:0px;font-size:8pt"><i>fig c. a simple text editor</i></span> <br><br><br><img src="resources/list.png" width="590px" />
-            <br>
-            <br>
-            <br>
-            <span style="position: relative; left: -50px; top:-180px;font-size:8pt"><i>fig d. a prompt with a text field</i></span> <img src="resources/prompt.png" width="380px" />
-            <br>
-            <br>
-            You can check out the source code <a href="https://github.com/masonalan/nprayers">here.</a>
-            <br>
-            <br>
-            <div id="world" style="padding-top:20px"></div>
-            <hr>
-            <h2>tyWorld</h2>
-            tyWorld is a simple OpenGL planet simulator written in C++. The planets are cubes and the asteroid belts are rendered using instanced rendering. The focus of this project was to learn about different types of lighting.
-            <br>
-            <br>
-            <span style="position: relative; left: -50px; top:-180px;font-size:8pt"><i>fig a. demo of tyWorld</i></span> <video width="600" controls autoplay>
-                <source src="resources/tyworld.mov" type="video/mp4">
-            </video>
-            <br>
-            <br>
-            You can check out the source code <a href="https://github.com/masonalan/ty-world">here.</a>
-            <br>
-            <br>
-            <div id="world" style="padding-top:20px"></div>
-            <hr>
-            <h2>tyOS Assets</h2>
-            We designed our brand ourselves. Here are the assets used to make this website. We do this because we don't believe in web frameworks or web development at all.
-            <br>
-            <br>
-            <span style="position: relative; left: -50px; top:-180px;font-size:8pt"><i>fig a. assets</i></span> <img src="resources/resource.png" width="480px" />
-            <br>
-            <br>
-            <span style="position: relative; left: -50px; top:-180px;font-size:8pt"><i>fig b. alt logo 1</i></span> <img src="resources/logo1.png" width="420px" />
-            <br>
-            <br>
-            <img src="resources/logo2.PNG" width="380px" /><span style="position: relative; left: 50px; top:-180px;font-size:8pt"><i>fig c. alt logo 2</i></span>
-            <br>
-            <br>
         </div>
     </div>
+    <!-- Image Zoom -->
+    <!--            -->
+    <div onClick="hideImage()" class="large-img hidden">
+        <div onClick="nullopt()" id="large-img-tag"></div>
+    </div>
+    <!-- Modals -->
+    <!--        -->
     <div id="modal-audio" class="modal-container modal-hidden">
         <div style="margin: 17px auto; width: 367px; height: 30px; padding-left: -5px; background-image: url('resources/win-title-bar-bg.png'); background-size: 367px 30px;">
             <p class="win-title">
                 <img src="resources/win-title-bar-icon.png" style="margin-top: 5px; margin-left: 9px;" width="20" height="17" />
                 Audio
-                <img onclick="closeModal()" class="win-close" style="position: relative; float: right; margin-top: 3px; margin-right: 3px;" width="24" height="24" />
+                <img onClick="closeModal()" class="win-close" style="position: relative; float: right; margin-top: 3px; margin-right: 3px;" width="24" height="24" />
             </p>
             <br>
             <fieldset>
                 <legend>Tracks</legend>
-                <img onclick="playAudio(1)" class="button-play" width="25" height="25" />&emsp;<span id="label-audio-1">1. hazex_132bpm.mp3</span><br>
-                <img onclick="playAudio(2)" class="button-play" width="25" height="25" />&emsp;<span id="label-audio-2">2. birds_trippie_129bpm.mp3</span><br>
-                <img onclick="playAudio(3)" class="button-play" width="25" height="25" />&emsp;<span id="label-audio-3">3. more_chaos_140bpm.mp3</span><br>
-                <img onclick="playAudio(4)" class="button-play" width="25" height="25" />&emsp;<span id="label-audio-4">4. aphex_jerk_186bpm.mp3</span><br>
+                <img onClick="playAudio(1)" class="button-play" width="25" height="25" />&emsp;<span id="label-audio-1">1. hazex_132bpm.mp3</span><br>
+                <img onClick="playAudio(2)" class="button-play" width="25" height="25" />&emsp;<span id="label-audio-2">2. birds_trippie_129bpm.mp3</span><br>
+                <img onClick="playAudio(3)" class="button-play" width="25" height="25" />&emsp;<span id="label-audio-3">3. more_chaos_140bpm.mp3</span><br>
+                <img onClick="playAudio(4)" class="button-play" width="25" height="25" />&emsp;<span id="label-audio-4">4. aphex_jerk_186bpm.mp3</span><br>
             </fieldset>
         </div>
     </div>
-    <!-- Modal/Settings -->
     <div id="modal-settings" class="modal-container modal-hidden">
         <div style="margin: 17px auto; width: 367px; height: 30px; padding-left: -5px; background-image: url('resources/win-title-bar-bg.png'); background-size: 367px 30px;">
             <p class="win-title">
                 <img src="resources/win-title-bar-icon.png" style="margin-top: 5px; margin-left: 9px;" width="20" height="17" />
                 Settings
-                <img onclick="closeModal()" class="win-close" style="position: relative; float: right; margin-top: 3px; margin-right: 3px;" width="24" height="24" />
+                <img onClick="closeModal()" class="win-close" style="position: relative; float: right; margin-top: 3px; margin-right: 3px;" width="24" height="24" />
             </p>
             <br>
             <fieldset>
@@ -157,13 +174,16 @@
             </fieldset>
         </div>
     </div>
-    <!-- Footer -->
+    <!-- Buttoms -->
+    <!--         -->
+        <div class="face-container">
+        <div class="face">
+        </div>
+    </div>
     <div class="audio-button" onclick="showAudioModal()">
     </div>
     <div class="settings-button" onclick="showSettingsModal()">
     </div>
-    <!--        <div class="back-button" onclick="goBack()">
-        </div> -->
 </body>
 
 </html>

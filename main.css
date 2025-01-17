@@ -13,22 +13,31 @@
     src: url("resources/helvn.ttf") format("truetype");
 }
 
-//  tyOS doesn't subscribe to your liberal, pc, angular, rust, carbon, bullshit, responsive ways. Use a computer or get cancer nerd. 
+@font-face {
+    font-family: "Gestura";
+    src: url("resources/NimbusRomNo9L-Reg.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "Gestura-Italic";
+    src: url("resources/gestura-italic.ttf") format("truetype");
+}
+
+/*//  tyOS doesn't subscribe to your liberal, pc, angular, rust, carbon, bullshit, responsive ways. Use a computer or get cancer nerd. */
 
 
 
 body {
-    font-family: Helvetica;
-    background-color: rgb(246, 246, 246);
-    margin: 0;
-    width: 100%;
-    min-height: 100vh;
-    background-image: url("resources/swoosh.png");
-    background-repeat: no-repeat;
+
+    /*    background-image: url("resources/swoosh.png");*/
+    /*    background-repeat: no-repeat;
     background-size: contain;
     background-position-y: bottom;
-    cursor: url("resources/cursor.gif") auto;
-    display: flex;
+    cursor: url("resources/cursor.gif") auto;*/
+    /*    /display: flex;*/
+            background-color: rgb(240, 240, 241);
+    margin: 0;
+    padding: 0;
 }
 
 .nav {
@@ -84,7 +93,7 @@ body {
 }
 
 .face {
-    background-image: url("resources/face.png");
+    background-image: url("resources/face6.png");
     background-size: 130px, 130px;
     background-repeat: no-repeat;
     width: 130px;
@@ -106,7 +115,9 @@ body {
 }
 
 .shine {
+    mask-image: url("resources/large-logo.png");
     animation: shine 3s linear infinite;
+    display: none;
 }
 
 @keyframes shine {
@@ -135,7 +146,7 @@ body {
 
 @keyframes faces {
     0% {
-        background-image: url("resources/face.png");
+        background-image: url("resources/face6.png");
     }
 
     12.5% {
@@ -194,6 +205,7 @@ body {
 .tr {
     color: #999;
     font-size: 10px;
+    font-family: "Helvetica";
 }
 
 /*#modal {
@@ -375,22 +387,28 @@ body {
 
 .home {
     background-image: url("resources/large-logo.png");
-    background-size: 500px auto;
+    background-size: 400px auto;
     background-position-x: 50%;
     background-repeat: no-repeat;
     margin-top: 75px;
+    width: 100%;
+    height: 400px;
 }
 
 .text {
-    font-family: "Times New Roman";
+    font-family: "Gestura";
     position: relative;
     /*  bottom: 170px;*/
     left: auto;
     width: 100%;
     text-align: center;
-    font-size: 12pt;
+    font-size: 11pt;
+    height: auto;
 
+}
 
+.hidden {
+    display: none !important;
 }
 
 .nav-bar {
@@ -402,7 +420,14 @@ body {
     min-width: 600px;
     font-family: Helvetica-Narrow;
     display: inline;
+
+    /*    top: 60px;*/
+    line-height: 40px;
+    z-index: 100000;
+    position: sticky;
+    top: 30;
 }
+
 
 .nav-img {
     height: 15px;
@@ -448,14 +473,41 @@ body {
     width: 50%;
     margin: auto;
     min-width: 600px;
-    margin-bottom: 100px;
+/*    //margin-bottom: 100px;*/
+    height: auto;
 }
 
-@media screen and (max-width: 600px) {
+
+.nav-break {
+    display: none;
+}
+
+@media screen and (max-device-width: 600px) {
     .content {
         width: 95%;
-        min-width: 0px;
     }
+
+    .nav-break {
+        display: inline;
+    }
+
+    .home {
+        background-size: 80% auto;
+        height: 800;
+    }
+
+    .front-logo {
+        width: 90%;
+    }
+
+    .start {
+                    filter: blur(0.7px);
+    }
+}
+
+body::after{
+   position:absolute; width:0; height:0; overflow:hidden; z-index:-1;
+   content:url(resources/face2.png) url(resources/face3.png) url(resources/face4.png)  url(resources/face5.png)  url(resources/face6.png)  url(resources/face7.png)  url(resources/face8.png) ; 
 }
 
 a {
@@ -464,7 +516,14 @@ a {
 }
 
 .start {
-    font-family: Times;
+    font-family: "Gestura";
+
+        font-family: Helvetica;
+
+    width: 100%;
+/*    min-height: 100vh;*/
+    position: relative;
+            filter: blur(0.37px);
 }
 
 .win-close {
@@ -519,15 +578,15 @@ a {
     /*    font-weight: bold;*/
 }
 
-.bg-area-wrapper {
+/*.bg-area-wrapper {
     z-index: 0;
     position: fixed;
     display: grid;
-    /*    grid-template-columns: auto auto auto auto;*/
-    grid-template-rows: auto auto auto auto auto;
+    /*    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto auto auto auto auto auto auto auto auto auto;
     grid-auto-flow: column;
     animation: bg linear 4s infinite;
-}
+}*/
 
 .bg-area-wrapper.w2 {
     margin-top: 100px;
@@ -540,7 +599,7 @@ a {
     height: 100px;
     display: flex;
     align-items: center;
-    opacity: 0.04;
+    opacity: 0.00;
     /*    filter: blur(2px);*/
 }
 
@@ -595,4 +654,42 @@ a {
     100% {
         top: -100px;
     }
+}
+
+.no-scroll {
+/*  //overflow: hidden;*/
+}
+
+.clickable-img {
+    border: 2px dashed rgba(0, 0, 0, 0);
+}
+
+.clickable-img:hover {
+    border: 2px dashed black;
+    cursor: pointer;
+}
+
+.large-img {
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.3);
+    position:fixed;
+        top: 0%;
+        left: 0%;
+    z-index: 9999999999;
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#large-img-tag {
+    width: 90%;
+    height: 90%;
+    top: 0;
+    max-width: 900px;
+    max-height: 800px;
+ background-size: contain;
+background-repeat: no-repeat;
+    background-position: center;
 }
