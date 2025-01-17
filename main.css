@@ -500,9 +500,9 @@ body {
         width: 90%;
     }
 
-    .start {
+/*    .start {
                     filter: blur(0.7px);
-    }
+    }*/
 }
 
 body::after{
