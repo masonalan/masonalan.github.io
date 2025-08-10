@@ -54,11 +54,12 @@
                 <div style="text-align: left;font-size: 10pt;">
                     <ol>
                         <li><a href="#real">real human bean - plugin</a><br></li>
+                        <li><a href="#fractal">Fractal Renderer</a><br></li>
+                        <li><a href="#drum">A Drum Machine in Terminal</a><br></li>
                         <li><a href="#granular">Granular Synth (w/ Ritual Object)</a><br></li>
                         <li><a href="#trundle"> Trundle: A Terminal UI Library</a><br></li>
                         <li><a href="#world">tyWorld</a><br></li>
                         <li><a href="#assets">tyOS Assets</a>
-                        <li><a href="#drum">A Drum Machine in Terminal</a><br></li>
                     </ol>
                 </div>
                 <br>
@@ -68,14 +69,13 @@
                 <div id="real" style="padding-top:20px"></div>
                 <hr>
                 <h2>real human bean</h2>
-                <br>
                 real human bean is an audio plugin that applies humanized offsets to a stream of samples, making the samples sound as if a person played them. It is ideal for channels that contain one drum part, such as a hi hat channel, snare channel, etc.
                 <br>
                 <br>
                 <span style="position: relative; left: -50px; top:-180px;font-size:8pt"><i>fig a. screenshot of plugin</i></span> <img class="clickable-img" onClick="showImage('real-human-bean-ss.png')" src="resources/real-human-bean-ss.png" width="510px" />
                 <br>
                 <br>
-                <span style="position: relative; left: -50px; top:-180px;font-size:8pt"><i>fig b. demo of plugin</i></span> <video width="250" controls autoplay>
+                <span style="position: relative; left: -50px; top:-180px;font-size:8pt"><i>fig b. demo of plugin</i></span> <video width="250" controls>
                     <source src="resources/real-human-bean-demo_4.mp4" type="video/mp4">
                 </video>
                 <br>
@@ -84,6 +84,56 @@
                 <br>
                 <br>
                 You can check out the source code <a href="https://github.com/masonalan/real-human-bean">here</a> and download the latest VST3 <a href="https://github.com/masonalan/real-human-bean/releases">here.</a>
+                                <br>
+                <br>
+                <div id="fractal" style="padding-top:20px"></div>
+                <hr>
+                <h2>Fractal Renderer</h2>
+                We wanted to experiment with rendering fractals in various ways. We initially wanted to focus on some sort of 3D representation of a fractal (different from a Mandlebulb) and ended up with some interesting renders. We ultimately settled on just making a traditional fractal renderer. Currently, it only supports the Mandlebrot set. However, this project is ongoing, and we'd love to ultimately support all sorts of fractals and allow users to control the color palette.
+                <br>
+                <br>
+                <span style="position: relative; left: -50px; top:-180px;font-size:8pt"><i>fig a. mandlebrot slighly 3D</i></span> <img class="clickable-img" onClick="showImage('fractal 1.png')" src="resources/fractal 1.png" width="310px" />
+                <br>
+                <br>
+                <img class="clickable-img" onClick="showImage('fractal 2.png')" src="resources/fractal 2.png" width="200px" /><span style="position: relative; left: 50px; top:-180px;font-size:8pt"><i>fig b. mandlebrot zoomed in</i></span>
+                <br>
+                <br>
+                <span style="position: relative; left: -50px; top:-180px;font-size:8pt"><i>fig c. low res mandlebrot edge</i></span> <img class="clickable-img" onClick="showImage('fractal 3.png')" src="resources/fractal 3.png" width="310px" />
+                <br>
+                <br>
+                <img class="clickable-img" onClick="showImage('fractal 4.png')" src="resources/fractal 4.png" width="280px" /><span style="position: relative; left: 50px; top:-180px;font-size:8pt"><i>fig d. low res mandlebrot stem</i></span>
+                <br>
+                <br>
+                <span style="position: relative; left: -50px; top:-180px;font-size:8pt"><i>fig e. mandlebrot 3D based on iterations</i></span> <img class="clickable-img" onClick="showImage('fractal 5.png')" src="resources/fractal 5.png" width="170px" />
+                <br>
+                <br>
+                <span style="position: relative; left: 100px; top:20px;font-size:8pt"><i>fig f. lightspeed mandlebrot</i></span> <br><br><br><img class="clickable-img" onClick="showImage('fractal 6.png')" src="resources/fractal 6.png" width="254px" />
+                <br>
+                <br>
+                You can check out the source code <a href="https://github.com/masonalan/fractal">here.</a>
+                <br>
+                <br>
+                <div id="drum" style="padding-top:20px"></div>
+                <hr>
+                <h2>A Drum Machine in Terminal</h2>
+                After building Trundle, we wanted to push the limits of what you can do in a command prompt. We thought recreating the FL Studio drum machine using Trundle would be a fun experiment in user experience with the goal being making a TUI for drum programming that is faster than using FL Studio's with a mouse. The experiment ultimately failed, but building a drum machine was fun for the whole team and a great way to spend January. 
+                <br>
+                <br>
+                <span style="position: relative; left: -50px; top:-180px;font-size:8pt"><i>fig a. making a beat</i></span> <video width="490" controls>
+                    <source src="resources/drum 1.mov" type="video/mp4">
+                </video>
+                <br>
+                <br>
+                <img class="clickable-img" onClick="showImage('drum 2.png')" src="resources/drum 2.png" width="340px" /><span style="position: relative; left: 50px; top:-180px;font-size:8pt"><i>fig b. sampler view</i></span>
+                <br>
+                <br>
+                <span style="position: relative; left: -50px; top:-180px;font-size:8pt"><i>fig c. entire view</i></span> <img class="clickable-img" onClick="showImage('drum 3.png')" src="resources/drum 3.png" width="420px" />
+                <br>
+                <br>
+                <img class="clickable-img" onClick="showImage('drum 4.png')" src="resources/drum 4.png" width="280px" /><span style="position: relative; left: 50px; top:-180px;font-size:8pt"><i>fig d. sample browser</i></span>
+                <br>
+                <br>
+                You can check out the source code <a href="https://github.com/masonalan/nprayers">here.</a>
                 <br>
                 <br>
                 <div id="granular" style="padding-top:20px"></div>
@@ -131,7 +181,7 @@
                 tyWorld is a simple OpenGL planet simulator written in C++. The planets are cubes and the asteroid belts are rendered using instanced rendering. The focus of this project was to learn about different types of lighting.
                 <br>
                 <br>
-                <span style="position: relative; left: -50px; top:-180px;font-size:8pt"><i>fig a. demo of tyWorld</i></span> <video width="600" controls autoplay>
+                <span style="position: relative; left: -50px; top:-180px;font-size:8pt"><i>fig a. demo of tyWorld</i></span> <video width="600" controls>
                     <source src="resources/tyworld.mov" type="video/mp4">
                 </video>
                 <br>
@@ -154,9 +204,24 @@
                 <img class="clickable-img" onClick="showImage('logo2.png')" src="resources/logo2.png" width="380px" /><span style="position: relative; left: 50px; top:-180px;font-size:8pt"><i>fig c. alt logo 2</i></span>
                 <br>
                 <br>
+                    <div class="toc">
+                    <b>&nbsp;&nbsp;&nbsp;&nbsp;Table of Contents:</b>
+                <div style="text-align: left;font-size: 10pt;">
+                    <ol>
+                        <li><a href="#real">real human bean - plugin</a><br></li>
+                        <li><a href="#fractal">Fractal Renderer</a><br></li>
+                        <li><a href="#drum">A Drum Machine in Terminal</a><br></li>
+                        <li><a href="#granular">Granular Synth (w/ Ritual Object)</a><br></li>
+                        <li><a href="#trundle"> Trundle: A Terminal UI Library</a><br></li>
+                        <li><a href="#world">tyWorld</a><br></li>
+                        <li><a href="#assets">tyOS Assets</a>
+                    </ol>
+                </div>
+            </div>
             </div>
         </div>
     </div>
+
     <!-- Image Zoom -->
     <!--            -->
     <div onClick="hideImage()" class="large-img hidden">
@@ -206,6 +271,9 @@
     </div>
     <div class="settings-button" onclick="showSettingsModal()">
     </div>
+
+
+
 </body>
 
 </html>

@@ -87,3 +87,15 @@ function hideImage() {
 function nullopt() {
 
 }
+
+window.addEventListener('scroll', function() {
+  const hiddenElement = document.querySelector('.toc');
+  const elementPosition = window.scrollY;
+
+  // If the element is within the viewport (e.g., 75% of the way up the screen)
+  if (elementPosition > 450) {
+    hiddenElement.classList.add('visible-element');
+  } else {
+    hiddenElement.classList.remove('visible-element');
+  }
+});

@@ -233,7 +233,7 @@ body {
     background-image: url("resources/win-bg.png");
     background-size: 400px 400px;
     background-color: rgba(0, 0, 0, 0);
-    position: absolute;
+    position: fixed;
 }
 
 #modal-settings {
@@ -692,4 +692,16 @@ a {
  background-size: contain;
 background-repeat: no-repeat;
     background-position: center;
+}
+
+.toc {
+    position: fixed;
+    left: 20px;
+    bottom: 150px;
+    text-align: left;
+    display: none;
+}
+
+.visible-element {
+    display: inline;
 }
