@@ -35,15 +35,20 @@ body {
     background-position-y: bottom;
     cursor: url("resources/cursor.gif") auto;*/
     /*    /display: flex;*/
-            background-color: rgb(240, 240, 241);
+            background-color: rgb(0, 0, 2);
+            color: rgb(241, 241, 244);
     margin: 0;
     padding: 0;
+}
+
+h2 {
+    font-family: "Helvetica-Narrow" !important;
 }
 
 .nav {
     font-family: Proggy;
     font-size: 200pt;
-    color: rgb(66, 18, 247);
+    color: rgb(241, 241, 243);
     position: relative;
 }
 
@@ -511,8 +516,7 @@ body::after{
 }
 
 a {
-    color: rgb(59, 47, 216);
-
+    color: rgb(255, 222, 36);
 }
 
 .start {
