@@ -391,13 +391,13 @@ h2 {
 }
 
 .home {
-    background-image: url("resources/large-logo.png");
+/*    background-image: url("resources/large-logo.png");
     background-size: 400px auto;
     background-position-x: 50%;
-    background-repeat: no-repeat;
-    margin-top: 75px;
-    width: 100%;
-    height: 400px;
+    background-repeat: no-repeat;*/
+    margin-top: 30px;
+/*    width: 100%;
+    height: 400px;*/
 }
 
 .text {
